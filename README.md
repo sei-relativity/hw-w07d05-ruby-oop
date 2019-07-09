@@ -1,10 +1,12 @@
 # Ruby Objects Homework
 
 ## Objectives:
-- Apply your knowledge of ruby to solve a real world problem.
-- Get really good at ruby classes and objects
+
+- Apply your knowledge of Ruby to solve a real world problem.
+- Get really good at Ruby classes and objects
 
 ## Activity
+
 Create a program that models a subway system.
 
 The program takes the line and stop that a user is getting on at and the line and stop that user is getting off at and prints the journey and the total number of stops for the trip in the console:
@@ -47,8 +49,8 @@ All 3 subway lines intersect at Park Street, but there are no other intersection
 Tell the user the number of stops between stations using ruby classes.
 ```rb
 class Subway
-    def stops_between_stations(start_line, start_station, end_line, end_station)
-    end
+  def stops_between_stations(start_line, start_station, end_line, end_station)
+  end
 end
   
 # One line, all the stations on that line
@@ -62,18 +64,18 @@ end
 
 And we should be able to find the number of stops with
 ```rb
-@mbta = Subway.new
-@mbta.stops_between_stations('Red', 'Alewife', 'Red', 'Alewife') # 0
-@mbta.stops_between_stations('Red', 'Alewife', 'Red', 'South Station') # 7
-@mbta.stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') # 6
+mbta = Subway.new
+mbta.stops_between_stations('Red', 'Alewife', 'Red', 'Alewife') # 0
+mbta.stops_between_stations('Red', 'Alewife', 'Red', 'South Station') # 7
+mbta.stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') # 6
 ```
 
 ### Bonus
 
 Tell the user the number of stops between stations AND the stops IN ORDER that they will pass through or change at.
 ```rb
-@mbta = Subway.new
-@mbta.stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') 
+mbta = Subway.new
+mbta.stops_between_stations('Red', 'South Station', 'Green', 'Kenmore') 
 # "You must travel through the following stops on the Red line:"
 # "South Station and Park Street"
 # "Change at Park Street."
