@@ -23,10 +23,10 @@ class Subway
     end
     def add_station (nstation)
       station = Station.new(nstation)
-      @available_stations << station.get
+      @available_stations << station
     end
     def number_of_stops(start_station,end_station)
-      (@available_stations.index(start_station)-@available_stations.index(end_station)).abs()
+      (@available_stations.index(@available_stations.detect { |station| station.get == start_station})-@available_stations.index(@available_stations.detect { |station| station.get == end_station})).abs()
     end
 
   end
